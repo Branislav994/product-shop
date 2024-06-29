@@ -4,7 +4,7 @@ import Button from './Button';
 import useCartStore from '../store/useCartStore';
 import { useNavigate } from 'react-router-dom';
 
-const Product = ({ product }) => {
+const ProductCard = ({ product }) => {
   const { addToCart } = useCartStore();
   const navigate = useNavigate();
 
@@ -25,14 +25,6 @@ const Product = ({ product }) => {
         <ProductPrice>${product.price.toFixed(2)}</ProductPrice>
       </CardHeader>
       <ProductDescription>{product.description}</ProductDescription>
-      <ProductFeatures>
-        <h4>Features:</h4>
-        <ul>
-          {product.features.slice(0, 3).map((feature, index) => (
-            <li key={index}>{feature}</li>
-          ))}
-        </ul>
-      </ProductFeatures>
       <CardFooter>
         <Button variant="secondary" onClick={(event) => addProduct(event, product.id)}>
           Add to Cart
@@ -89,30 +81,13 @@ const ProductDescription = styled.p`
   text-overflow: ellipsis;
 `;
 
-const ProductFeatures = styled.div`
-  margin-bottom: 15px;
-  h4 {
-    margin: 0 0 10px 0;
-    font-size: 1.2rem;
-    color: #333;
-  }
-  ul {
-    padding-left: 20px;
-    list-style-type: disc;
-    color: #555;
-    max-height: 60px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-`;
-
 const CardFooter = styled.div`
   display: flex;
   justify-content: space-between;
   margin-top: 15px;
 `;
 
-Product.propTypes = {
+ProductCard.propTypes = {
   product: PropTypes.shape({
     id: PropTypes.number.isRequired,
     name: PropTypes.string.isRequired,
@@ -124,4 +99,4 @@ Product.propTypes = {
   }).isRequired,
 };
 
-export default Product;
+export default ProductCard;

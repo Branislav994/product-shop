@@ -6,7 +6,7 @@ import Loader from '../components/Loader';
 import Error from '../components/Error';
 import Button from '../components/Button';
 
-const ProductDetails = () => {
+const Product = () => {
   const { productId } = useParams();
   const navigate = useNavigate();
   const { data: products, isLoading, isError } = useProducts();
@@ -138,4 +138,4 @@ const BackButton = styled.button`
   }
 `;
 
-export default ProductDetails;
+export default Product;

@@ -1,6 +1,6 @@
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import Home from '../pages/Home';
-import ProductDetails from '../pages/ProductDetails';
+import Product from '../pages/Product';
 
 
 const AppRouter = () => {
@@ -8,7 +8,7 @@ const AppRouter = () => {
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/product/:productId" element={<ProductDetails />} />
+        <Route path="/product/:productId" element={<Product />} />
         <Route path="*" element={<Home />} />
      </Routes>
     </Router>

@@ -35,7 +35,7 @@ const Sidebar = () => {
                 <CartItem key={item.id}>
                   <ItemDetails>
                     <ItemName>{item.name}</ItemName>
-                    <ItemQuantity>Quantity: {item.quantity}</ItemQuantity>
+                    <ItemQuantity>Quantity: {item.quantity} - ${item.price}</ItemQuantity>
                     <ItemPrice>${(item.price * item.quantity).toFixed(2)}</ItemPrice>
                   </ItemDetails>
                   <ButtonGroup>
