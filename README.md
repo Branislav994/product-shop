@@ -16,7 +16,7 @@ Make sure you have the following software installed on your machine:
 ### Installation
 
 1. Clone the repository to your local machine:
-- git clone git@github.com:Branislav994/product-shop.git
+- git clone https://github.com/Branislav994/product-shop.git
 - cd product-shop
 
 
